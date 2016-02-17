@@ -1,0 +1,10 @@
+User.create(name:"Megan")
+User.create(name:"Roche")
+User.create(name:"Besha")
+User.create(name:"Cree")
+User.create(name:"Lieva")
+User.create(name:"Matt")
+User.create(name:"Adi")
+
+Chore.create(name: "Clear Dishwasher", points: 2, frequency:1, clean: false)
+Chore.create(name: "Vacuum Hall", points: 5, frequency:7, clean: false)
