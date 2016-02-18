@@ -9,7 +9,7 @@ View.prototype.fadeDivs = function(div1, div2){
     }, 250)
 };
 View.prototype.addGoldstarDOM = function(response){
-  element="div#" + response
+  element="li#" + response
   console.log(element);
   $(element).append('<div id="goldstar"></div>')
 }
