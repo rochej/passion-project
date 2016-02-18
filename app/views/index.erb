@@ -1,0 +1,35 @@
+<h1>Welcome!</h1>
+
+<div id="stats">
+  <h2>Stats</h2>
+    <ul>
+    <% @users.each do |user| %>
+      <li><%= user.name %></li>
+    <% end %>
+    </ul>
+</div>
+
+<div id="did-a-thing">
+  <div class="button-wrapper" id="first">
+    <button id="first" type="button">I did a thing!</button>
+  </div>
+  <div id="who">
+    <h2>Who are you?</h2>
+      <div class="button-wrapper">
+        <% @users.each do |user| %>
+          <button class="user" type="button" id="<%=user.id%>"><%=user.name%></button>
+        <% end %>
+      </div>
+  </div>
+    <div id="what">
+    <h2>What did you do?</h2>
+      <div class="button-wrapper">
+        <% @chores.each do |chore| %>
+          <button class="chore" type="button" id="<%=chore.id%>"><%=chore.name%></button>
+        <% end %>
+      </div>
+  </div>
+<div>
+
+
+

@@ -1,0 +1,60 @@
+*{
+  /*box-sizing:border-box;*/
+}
+
+body{
+  background-color: black;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+#stats{
+  position: relative;
+  background-color: grey;
+  border-radius: 1%;
+  margin: auto;
+  width: 50%;
+  height: 300px;
+}
+
+#did-a-thing{
+  position: relative;
+  background-color: grey;
+  border-radius: 1%;
+  top: 20px;
+  margin: auto;
+  width: 50%;
+  height: 100px;
+}
+
+#first {
+  position: relative;
+  top: 30px;
+}
+
+h2{
+  text-align: center;
+  padding: 10px;
+  margin: 0px;
+}
+
+#goldstar{
+  position: relative;
+  display: inline-block;
+  background: url('../images/goldstar2.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}
+#who{
+  display: none;
+}
+#what{
+  display: none;
+}
+.button-wrapper{
+  margin: 0 auto;
+  text-align: center;
+}
+
+
