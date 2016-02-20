@@ -1,0 +1,45 @@
+body{
+  background-image: url("../images/blue-tile.jpg");
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+.col-centered{
+  margin:auto;
+  float: none;
+  background-color: white;
+  border-radius: 1%
+}
+#did-a-thing{
+  height: 150px;
+}
+ul{
+  list-style-type: none;
+}
+.button-wrapper{
+  margin: 0 auto;
+  text-align: center;
+}
+#who{
+  display: none;
+}
+#what{
+  display: none;
+}
+/* Flaired edges, by Tomas Theunissen */
+
+hr.style-seven {
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+hr.style-seven:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
