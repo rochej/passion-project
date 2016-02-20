@@ -1,4 +1,6 @@
-<h1>Welcome!</h1>
+<div class="col-md-8 col-centered">
+
+<h1 class="text-center">Welcome!</h1>
 
 <div id="stats">
   <h2>Stats</h2>
@@ -9,27 +11,28 @@
     </ul>
 </div>
 
+<hr class="style-seven">
+
 <div id="did-a-thing">
   <div class="button-wrapper" id="first">
-    <button id="first" type="button">I did a thing!</button>
+    <button class="btn btn-default" id="first" type="button">I did a thing!</button>
   </div>
   <div id="who">
-    <h2>Who are you?</h2>
+    <h2 class="text-center">Who are you?</h2>
       <div class="button-wrapper">
         <% @users.each do |user| %>
-          <button class="user" type="button" id="<%=user.id%>"><%=user.name%></button>
+          <button class="btn btn-default user" type="button" id="<%=user.id%>"><%=user.name%></button>
         <% end %>
       </div>
   </div>
     <div id="what">
-    <h2>What did you do?</h2>
+    <h2 class="text-center">What did you do?</h2>
       <div class="button-wrapper">
         <% @chores.each do |chore| %>
-          <button class="chore" type="button" id="<%=chore.id%>"><%=chore.name%></button>
+          <button class="btn btn-default chore" type="button" id="<%=chore.id%>" title="<%=chore.name%>"><img src="<%=chore.icon%>"></button>
         <% end %>
       </div>
   </div>
-<div>
-
+</div>
 
 

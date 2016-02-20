@@ -5,6 +5,7 @@ class CreateChores < ActiveRecord::Migration
       t.integer :points
       t.boolean :clean
       t.integer :frequency
+      t.string :icon
       t.timestamps
     end
   end
