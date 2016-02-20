@@ -15,6 +15,15 @@ View.prototype.addGoldstarDOM = function(response){
   $(goldstar).hide().appendTo(userCell).fadeIn("slow");
 }
 
+View.prototype.getChore = function(){
+  $('#did-a-thing').on("click", ".chore", function(e){
+  e.preventDefault();
+  var chore = $(this).attr("id");
+  console.log(chore);
+  return chore;
+  })
+}
+
 function Controller(view){
   this.view = view;
 };

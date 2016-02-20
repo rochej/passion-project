@@ -9,17 +9,28 @@ $(document).ready(function() {
     e.preventDefault();
     var user = $(this).attr("id");
     view.fadeDivs("#who", "#what");
-    $('#did-a-thing').on("click", ".chore", function(e){
-      e.preventDefault();
-      var chore = $(this).attr("id");
+
+    var promise = new Promise(function(fulfill, reject){
+      var chore = view.getChore();
+      console.log(chore);
+      if (chore != undefined){
+        fulfill(chore);
+      }
+      else{
+        reject(chore);
+      }
+    });
+    promise.then(function(user,chore){
       controller.addGoldstar(user, chore);
-      view.fadeDivs("#what", "#thank-you");
-    })
+    }, function(user, chore){
+      console.log("rejected!")
+    });
+
+    view.fadeDivs("#what", "#thank-you");
     $('#more').on("click", '#did-a-thing', function(e){
       e.preventDefault();
       view.fadeDivs('#more', '#what')
-      var chore = $(this).attr("id");
-      controller.addGoldstar(user, chore);
+      var chore = view.getChore();
       view.fadeDivs("#what", "#thank-you");
     })
   })
