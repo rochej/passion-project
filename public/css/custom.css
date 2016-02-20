@@ -1,8 +1,10 @@
 body{
   background-image: url("../images/blue-tile.jpg");
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  box-sizing: border-box;
 }
 .col-centered{
+  padding: 10px;
   margin:auto;
   float: none;
   background-color: white;
@@ -11,8 +13,14 @@ body{
 #did-a-thing{
   height: 150px;
 }
-ul{
-  list-style-type: none;
+
+td{
+  vertical-align: middle;
+  height: 50px;
+}
+tr{
+
+  height: 50px;
 }
 .button-wrapper{
   margin: 0 auto;
@@ -24,6 +32,19 @@ ul{
 #what{
   display: none;
 }
+#thank-you{
+  display: none;
+}
+
+/*#goldstar{
+  position: relative;
+  display: inline-block;
+  background: url('../images/goldstar3.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+}*/
 /* Flaired edges, by Tomas Theunissen */
 
 hr.style-seven {
