@@ -13,6 +13,14 @@ $(document).ready(function() {
       e.preventDefault();
       var chore = $(this).attr("id");
       controller.addGoldstar(user, chore);
+      view.fadeDivs("#what", "#thank-you");
+    })
+    $('#more').on("click", '#did-a-thing', function(e){
+      e.preventDefault();
+      view.fadeDivs('#more', '#what')
+      var chore = $(this).attr("id");
+      controller.addGoldstar(user, chore);
+      view.fadeDivs("#what", "#thank-you");
     })
   })
 

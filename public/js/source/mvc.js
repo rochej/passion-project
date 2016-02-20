@@ -9,9 +9,10 @@ View.prototype.fadeDivs = function(div1, div2){
     }, 250)
 };
 View.prototype.addGoldstarDOM = function(response){
-  element="li#" + response
-  console.log(element);
-  $(element).append('<div id="goldstar"></div>')
+  var userRow="tr#" + response
+  var userCell = $(userRow).children();
+  var goldstar = "<img src='../images/goldstar3.png'>"
+  $(goldstar).hide().appendTo(userCell).fadeIn("slow");
 }
 
 function Controller(view){
