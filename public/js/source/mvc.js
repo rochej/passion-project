@@ -22,5 +22,16 @@ function Controller(view){
 Controller.prototype.addGoldstar = function(user, chore){
   var uri = "/users/" + user + "/chores/" + chore
   var requestObject = $.ajax({url: uri, type: "POST", context: this}).done(function(response){ this.view.addGoldstarDOM(response);
+      this.lessDirty();
   });
+}
+
+Controller.prototype.lessDirty = function(){
+  var uri = "/chores"
+  $.ajax({url: uri, type: "GET", context: this}).done(function(response){
+    $('#things-to-do').fadeOut(1000);
+    setTimeout(function(){
+      $('#things-to-do').html(response).fadeIn('fast');
+    }, 1000)
+  })
 }

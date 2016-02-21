@@ -14,6 +14,7 @@ $(document).ready(function() {
       e.preventDefault();
       var chore = $(this).attr("id");
       controller.addGoldstar(user, chore);
+
       view.fadeDivs("#what", "#thank-you");
     })
   })

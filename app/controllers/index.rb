@@ -15,4 +15,9 @@ post '/users/:id/chores/:chore_id' do
   return @user.id.to_s
 end
 
+get '/chores' do
+  @chores = Chore.all
+  return erb :'_dirty_sentence', :layout => false, :locals =>{chores: @chores}
+end
+
 

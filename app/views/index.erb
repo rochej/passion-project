@@ -45,7 +45,7 @@
 <hr class="style-seven">
 
   <div class="text-center" id="things-to-do">
-    <%= dirty_sentence(@chores) %>
+    <%= erb :'_dirty_sentence', :layout => false, :locals =>{chores: @chores} %>
   </div>
 
 <hr class="style-seven">
