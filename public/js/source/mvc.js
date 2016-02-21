@@ -1,12 +1,12 @@
 function View(){};
 
 View.prototype.fadeDivs = function(div1, div2){
-  $(div1).fadeOut(200, function(){
+  $(div1).fadeOut(300, function(){
     })
     setTimeout(function(){
-      $(div2).fadeIn(400, function(){
+      $(div2).fadeIn(300, function(){
       })
-    }, 250)
+    }, 350)
 };
 View.prototype.addGoldstarDOM = function(response){
   var userRow="tr#" + response

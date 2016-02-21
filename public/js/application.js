@@ -3,21 +3,15 @@ $(document).ready(function() {
   var controller = new Controller(view);
   $('#first').on("click", function(e){
     e.preventDefault();
-  view.fadeDivs("#first", "#who");
+    view.fadeDivs("#first", "#who");
   })
   $("#did-a-thing").on("click", '.user', function(e){
     e.preventDefault();
-    var user = $(this).attr("id");
+    $('#thank-you').fadeOut("fast");
+    user = $(this).attr("id"); //purposefully global
     view.fadeDivs("#who", "#what");
     $('#did-a-thing').on("click", ".chore", function(e){
       e.preventDefault();
-      var chore = $(this).attr("id");
-      controller.addGoldstar(user, chore);
-      view.fadeDivs("#what", "#thank-you");
-    })
-    $('#more').on("click", '#did-a-thing', function(e){
-      e.preventDefault();
-      view.fadeDivs('#more', '#what')
       var chore = $(this).attr("id");
       controller.addGoldstar(user, chore);
       view.fadeDivs("#what", "#thank-you");
