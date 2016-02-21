@@ -1,17 +1,23 @@
 body{
   background-image: url("../images/blue-tile.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   box-sizing: border-box;
 }
 .col-centered{
   padding: 10px;
   margin:auto;
+  margin-top: 20px;
   float: none;
   background-color: white;
   border-radius: 1%
 }
 #did-a-thing{
-  height: 150px;
+  height: 100px;
+}
+#things-to-do{
+  height: 75px;
 }
 
 td{

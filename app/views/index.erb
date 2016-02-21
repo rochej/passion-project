@@ -7,7 +7,7 @@
     <% @users.each do |user| %>
       <tr id="<%=user.id%>">
         <td class="col-md-12"><%= user.name %>
-        <%user.chores.length.times do%><img src='../images/goldstar3.png'></td><%end%>
+        <%user.goldstars.length.times do%><img src='../images/goldstar3.png'><%end%></td>
       </tr>
     <% end %>
     </table>
@@ -27,20 +27,27 @@
         <% end %>
       </div><!--end bttn wrapper-->
   </div><!--end who-->
-    <div id="what">
+  <div id="what">
     <h2 class="text-center">What did you do?</h2>
       <div class="button-wrapper">
         <% @chores.each do |chore| %>
           <button class="btn btn-default chore" type="button" id="<%=chore.id%>" title="<%=chore.name%>"><img src="<%=chore.icon%>"></button>
         <% end %>
       </div><!--end bttn wrapper-->
-    </div><!--end what-->
-    <div id="thank-you">
+  </div><!--end what-->
+  <div id="thank-you">
       <h2 class="text-center">You are awesome!</h2>
-        <div class="button-wrapper" id="first">
-          <button class="btn btn-default" id="more" type="button">Anything else?</button>
-        </div><!--end bttn wrapper-->
-    </div><!--end thank-you-->
-</div><!--end did-a-thing-->
+        <!-- <div class="button-wrapper" id="first">
+          <button class="btn btn-default user" type="button">Anything else?</button> -->
+  </div><!--end thank-you-->
+  </div><!--end did-a-thing-->
 
+<hr class="style-seven">
 
+  <div class="text-center" id="things-to-do">
+    <%= dirty_sentence(@chores) %>
+  </div>
+
+<hr class="style-seven">
+
+</div>
