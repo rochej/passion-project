@@ -1,0 +1,21 @@
+<div class="col-md-8 col-centered">
+  <h1 class="text-center">Monthly</h1>
+
+  <div id="monthly">
+    <table class="table">
+      <tr>
+        <th>Roommate</th>
+        <th>Points</th>
+        <th>Dollars</th>
+      </tr>
+    <% @users.each do |user| %>
+      <tr id="<%=user.id%>">
+        <td><%= user.name %></td>
+        <td><%= total_points(user)%></td>
+        <td>$<%= dollars(user)%></td>
+      </tr>
+    <% end %>
+    </table>
+</div>
+
+</div>

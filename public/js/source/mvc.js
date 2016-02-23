@@ -40,5 +40,5 @@ Controller.prototype.lessDirty = function(){
 
 Controller.prototype.setSession = function(user_id){
   var uri = "/users/" + user_id
-  $.ajax({url: uri, type: "GET"});
+  $.ajax({url: uri, type: "POST"});
 }

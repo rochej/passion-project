@@ -4,7 +4,7 @@ get '/' do
   erb :index
 end
 
-get'/users/:id' do
+post'/users/:id' do
   session[:user_id] = params[:id]
 end
 
@@ -22,6 +22,11 @@ end
 get '/chores' do
   @chores = Chore.all
   return erb :'_dirty_sentence', :layout => false, :locals =>{chores: @chores}
+end
+
+get '/monthly' do
+  @users = User.all
+  erb :monthly_accounting
 end
 
 
