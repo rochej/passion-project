@@ -7,21 +7,18 @@ $(document).ready(function() {
   })
   $("#did-a-thing").on("click", '.user', function(e){
     e.preventDefault();
-    $('#thank-you').fadeOut("fast");
-    user = $(this).attr("id"); //purposefully global
+    console.log($(this).attr("id"))
+    controller.setSession($(this).attr("id"));
     view.fadeDivs("#who", "#what");
-    $('#did-a-thing').on("click", ".chore", function(e){
+  })
+  $('#did-a-thing').on("click", ".chore", function(e){
       e.preventDefault();
       var chore = $(this).attr("id");
-      controller.addGoldstar(user, chore);
-
+      controller.addGoldstar(chore);
       view.fadeDivs("#what", "#thank-you");
-    })
   })
-
-  // This is called after the document has loaded in its entirety
-  // This guarantees that any elements we bind to will exist on the page
-  // when we try to bind to them
-
-  // See: http://docs.jquery.com/Tutorials:Introducing_$(document).ready()
+  $('#did-a-thing').on("click", "#another-thing", function(e){
+      e.preventDefault();
+      view.fadeDivs("#thank-you", "#what")
+  })
 });

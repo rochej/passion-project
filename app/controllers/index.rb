@@ -4,12 +4,16 @@ get '/' do
   erb :index
 end
 
+get'/users/:id' do
+  session[:user_id] = params[:id]
+end
+
 get '/bootstrap' do
   erb :test
 end
 
-post '/users/:id/chores/:chore_id' do
-  @user = User.find(params[:id]);
+post '/users/chores/:chore_id' do
+  @user = User.find(session[:user_id]);
   @chore = Chore.find(params[:chore_id]);
   @user.chores << @chore
   return @user.id.to_s

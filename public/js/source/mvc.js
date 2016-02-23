@@ -1,3 +1,5 @@
+//sessions controller
+
 function View(){};
 
 View.prototype.fadeDivs = function(div1, div2){
@@ -19,8 +21,8 @@ function Controller(view){
   this.view = view;
 };
 
-Controller.prototype.addGoldstar = function(user, chore){
-  var uri = "/users/" + user + "/chores/" + chore
+Controller.prototype.addGoldstar = function(chore){
+  var uri = "/users/chores/" + chore
   var requestObject = $.ajax({url: uri, type: "POST", context: this}).done(function(response){ this.view.addGoldstarDOM(response);
       this.lessDirty();
   });
@@ -34,4 +36,9 @@ Controller.prototype.lessDirty = function(){
       $('#things-to-do').html(response).fadeIn('fast');
     }, 1000)
   })
+}
+
+Controller.prototype.setSession = function(user_id){
+  var uri = "/users/" + user_id
+  $.ajax({url: uri, type: "GET"});
 }
