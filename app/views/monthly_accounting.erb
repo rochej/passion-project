@@ -1,8 +1,8 @@
 <div class="col-md-8 col-centered">
   <h1 class="text-center">Monthly
-    <% month = Date::MONTHNAMES[Date.today.month] %>
+    <% month = Date.today.month %>
     <div class="selected-month">
-      <small><%=month%></small>
+      <small><%=Date::MONTHNAMES[month]%></small>
     </div>
   </h1>
 
