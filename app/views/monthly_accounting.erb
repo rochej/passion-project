@@ -1,0 +1,33 @@
+<div class="col-md-8 col-centered">
+  <h1 class="text-center">Monthly
+    <% month = Date.today.month %>
+    <div class="selected-month">
+      <small><%=Date::MONTHNAMES[month]%></small>
+    </div>
+  </h1>
+
+  <div id="month-dropdown" class = "btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Months<span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <% for i in 1..12 %>
+          <li><a id="month-choice" href="<%=i%>"><%=Date::MONTHNAMES[i]%></a></li>
+        <% end %>
+      </ul>
+    </div> <!--end button group -->
+
+
+
+  <div id="monthly">
+    <table class="table">
+      <tr>
+        <th>Roommate</th>
+        <th>Points</th>
+        <th>Dollars</th>
+      </tr>
+      <div id="show-one-month">
+        <%=erb :_show_one_month, layout: false, locals: {users: @users, month: month} %>
+      </div><!--end show-one-month-->
+    </table>
+</div>
+
+</div>
