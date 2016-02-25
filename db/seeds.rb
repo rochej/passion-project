@@ -1,5 +1,5 @@
 User.create(name:"Megan")
-User.create(name:"Roche")
+User.create(name:"Roche", cell: "+13232400224", email: "rochej@gmail.com")
 User.create(name:"Besha")
 User.create(name:"Cree")
 User.create(name:"Lieva")

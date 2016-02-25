@@ -13,8 +13,9 @@ gem 'activerecord', '~>4.2.0'
 gem 'rake'
 gem 'twilio-ruby'
 gem 'thin'
+gem 'dotenv'
 
-# gem 'shotgun'
+gem 'shotgun'
 
 group :test do
   gem 'shoulda-matchers'
@@ -24,7 +25,6 @@ group :test do
 end
 
 group :test, :development do
-  # gem 'dotenv-rails'
   gem 'factory_girl'
   gem 'faker'
 end

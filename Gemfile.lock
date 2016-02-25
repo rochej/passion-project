@@ -25,6 +25,7 @@ GEM
       xpath (~> 2.0)
     daemons (1.2.3)
     diff-lcs (1.2.5)
+    dotenv (2.1.0)
     eventmachine (1.0.9.1)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
@@ -59,6 +60,8 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.2.0)
     rspec-support (3.2.0)
+    shotgun (0.9)
+      rack (>= 1.0)
     shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
     sinatra (1.4.5)
@@ -94,12 +97,14 @@ DEPENDENCIES
   activerecord (~> 4.2.0)
   activesupport (~> 4.2.0)
   capybara
+  dotenv
   factory_girl
   faker
   pg
   rack-test
   rake
   rspec (~> 3.0)
+  shotgun
   shoulda-matchers
   sinatra
   sinatra-contrib
