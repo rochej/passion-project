@@ -1,6 +1,4 @@
 require 'twilio-ruby'
-require 'dotenv'
-Dotenv.load
 
 # client = Twilio::REST::Client.new ENV['TWILIOSID'], ENV['TWILIOTOKEN']
 # from = "+15622685058"
