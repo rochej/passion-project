@@ -7,8 +7,7 @@ require 'bundler/setup' if File.exists?(ENV['BUNDLE_GEMFILE'])
 
 # Require gems we care about
 require 'rubygems'
-require 'dotenv'
-Dotenv.load
+
 
 require 'twilio-ruby'
 
@@ -21,6 +20,8 @@ require 'logger'
 
 require 'sinatra'
 require "sinatra/reloader" if development?
+require 'dotenv' if development?
+Dotenv.load if development?
 
 require 'erb'
 require 'date'

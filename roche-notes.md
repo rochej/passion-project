@@ -3,6 +3,9 @@
 //when we select the month on the dropdown, the div changes to include the new month--
 
 //so...what next?  i want to add the sms feature?  maybe a cute little 10% box?  if I have time...
+//https://www.twilio.com
+
+//get all the messages sent to the log in the last week that were sent TO the number.  match cell number to userID, display body of message
 
 //month dropdown feature
 
@@ -14,3 +17,4 @@
         <% end %>
       </ul>
     </div> <!--end button group -->
+
