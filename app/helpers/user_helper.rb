@@ -22,6 +22,6 @@ def dollars(user, month)
   all_points = all_user_points(month)
   month_dollars = 50
   dollars = (total_points.to_f/all_points.to_f) * month_dollars
-  # dollars = dollars.to_i
+  dollars = dollars.to_i
   return dollars
 end
