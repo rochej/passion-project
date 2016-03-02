@@ -7,7 +7,3 @@ end
 post'/users/:id' do
   session[:user_id] = params[:id]
 end
-
-
-
-

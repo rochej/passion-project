@@ -1,30 +1,24 @@
-> **Note**: This branch (master) contains a skeleton without any app code, perfect for creating a _new_ application or challenge. If you're looking for an example app built with this skeleton, take a look at the [example](/../..//tree/example) branch which includes basic CRUD and RSpec tests.
+Goldstar is a chore-tracking web app made for the Naked Lady House in San Francisco, CA.
 
-### Purpose
-The Sinatra Skeleton:
+Our system is simple--do chores, get points, get paid.  The problem--housemates are inconsistent about writing down their chores in the accounting book.  Enter Goldstar, a simple web interface to enter your chores into the system.
 
-1. Provides a foundation for building challenges or creating a new Sinatra application.
-2. Demonstrates a reasonable set of practices around building Sinatra applications.
-3. Eases the transition to Rails for Dev Bootcamp students
+#Features:
 
-### Quickstart
+##Main Page:
+See other roommates' stats
+Enter what you've done
 
-1.  `bundle install`
-2.  `shotgun config.ru`
+No user authentication is required because:
+- It's tedious
+- We trust one another
+- Who'd log on to give someone else points?
 
-As needed, create models & migrations with the `rake` tasks:
+##Monthly:
+See how much money to doll out at the end of the month.  Our monthly budget it $50, split among all chore doers.
 
-```
-rake generate:migration  # Create an empty migration in db/migrate, e.g., rake generate:migration NAME=create_tasks
-rake generate:model      # Create an empty model in app/models, e.g., rake generate:model NAME=User
-```
+##10%:
+Ten Percent is going above and beyond the day-to-day maintenance of the house.  Make cheesecake?  Reorganize the deep-storage?  Text it to the 10% number and it shows up on the 10% page for all to appreciate.
 
-### Contributing
+#Using:
+Fork it and make it your own!  Tell me all about it.  Custom house data is added in the seed file.
 
-We would love for you to help make the skeleton more awesome, There are three ways to contribute:
-
-1. Ask for a bug fix or enhancement!
-2. Submit a pull request for a bug fix or enhancement!
-3. Code review an open pull request!
-
-Be prepared to give and receive specific, actionable, and kind feedback!

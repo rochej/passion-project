@@ -3,8 +3,6 @@ def total_points(user, month)
   user.goldstars.each do |goldstar|
     total_points += goldstar.chore.points if goldstar.created_at.month == month.to_i
   end
-  # p "*" *80
-  # p total_points
   return total_points
 end
 

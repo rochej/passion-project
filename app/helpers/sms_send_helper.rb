@@ -1,3 +1,4 @@
+# TO BE IMPLEMENTED
 # require 'twilio-ruby'
 
 # client = Twilio::REST::Client.new ENV['TWILIOSID'], ENV['TWILIOTOKEN']
