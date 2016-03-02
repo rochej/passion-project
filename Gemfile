@@ -14,6 +14,7 @@ gem 'rake'
 gem 'twilio-ruby'
 gem 'thin'
 gem 'dotenv'
+gem 'mail'
 
 gem 'shotgun'
 
