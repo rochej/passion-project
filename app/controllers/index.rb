@@ -1,6 +1,7 @@
 get '/' do
   @users = User.all
   @chores = Chore.all
+  Sender.ten_percent.deliver
   erb :index
 end
 

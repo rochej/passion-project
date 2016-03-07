@@ -17,6 +17,11 @@ require 'pathname'
 require 'pg'
 require 'active_record'
 require 'logger'
+require 'resque'
+require 'resque/server'
+require 'resque_scheduler'
+require 'action_mailer'
+require 'resque_mailer'
 
 require 'sinatra'
 require "sinatra/reloader" if development?
@@ -49,3 +54,19 @@ Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
 
 # Set up the database and models
 require APP_ROOT.join('config', 'database')
+
+# actionmailer config
+ActionMailer::Base.raise_delivery_errors = true
+ActionMailer::Base.delivery_method = :smtp
+ActionMailer::Base.smtp_settings = {
+   :address        => "smtp.gmail.com",
+   :port           => 587,
+   :domain         => "example.com",
+   :authentication => :plain,
+   :user_name      => ENV['GMAIL'],
+   :password       => ENV['PASS'],
+   :enable_starttls_auto => true
+  }
+ActionMailer::Base.view_paths = File.expand_path('../../../passion-project/app/views/', __FILE__)
+
+Resque::Mailer.current_env = :production
