@@ -16,6 +16,7 @@ gem 'thin'
 gem 'dotenv'
 gem 'resque', "~> 1.22.0"
 gem 'actionmailer'
+gem 'resque_mailer'
 
 gem 'shotgun'
 
