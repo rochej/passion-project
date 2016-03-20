@@ -17,11 +17,6 @@ require 'pathname'
 require 'pg'
 require 'active_record'
 require 'logger'
-require 'resque'
-require 'resque/server'
-require 'resque_scheduler'
-require 'action_mailer'
-require 'resque_mailer'
 
 require 'sinatra'
 require "sinatra/reloader" if development?
